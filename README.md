@@ -1,6 +1,6 @@
-# CARTOVALA
+# TOONIQUE
 
-CARTOVALA is a vibrant, engaging web page that takes you back to your childhood with a delightful collection of your favorite cartoon characters and princesses. This interactive, aesthetically pleasing project celebrates timeless characters and offers users a fun and nostalgic browsing experience.
+TOONIQUE is a vibrant, engaging web page that takes you back to your childhood with a delightful collection of your favorite cartoon characters and princesses. This interactive, aesthetically pleasing project celebrates timeless characters and offers users a fun and nostalgic browsing experience.
 
 ---
 
