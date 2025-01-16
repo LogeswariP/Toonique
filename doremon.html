@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+ body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #f0f0f0);
+  }
+</style>
+</head>
+<body>
+<center><h1 style="color:hotpink;size=150%;">USING CANVAS</h1></center>
+<canvas id="doraemonCanvas" width="400" height="400"></canvas>
+
+<script>
+  const canvas = document.getElementById('doraemonCanvas');
+  const context = canvas.getContext('2d');
+
+  // Draw Doraemon's face
+  context.fillStyle = '#36a1ff';
+  context.beginPath();
+  context.arc(200, 200, 100, 0, Math.PI * 2);
+  context.fill();
+
+  // Draw Doraemon's eyes
+  context.fillStyle = '#fff';
+  context.beginPath();
+  context.arc(160, 160, 20, 0, Math.PI * 2);
+  context.arc(240, 160, 20, 0, Math.PI * 2);
+  context.fill();
+
+  // Draw Doraemon's nose
+  context.fillStyle = '#f00';
+  context.beginPath();
+  context.arc(200, 200, 8, 0, Math.PI * 2);
+  context.fill();
+
+  // Draw Doraemon's mouth
+  context.strokeStyle = '#000';
+  context.lineWidth = 2;
+  context.beginPath();
+  context.arc(200, 220, 40, 0.2 * Math.PI, 0.8 * Math.PI);
+  context.stroke();
+
+  // Draw Doraemon's whiskers
+  context.strokeStyle = '#000';
+  context.lineWidth = 2;
+  context.beginPath();
+  context.moveTo(150, 200);
+  context.lineTo(110, 190);
+  context.moveTo(150, 200);
+  context.lineTo(110, 210);
+  context.moveTo(250, 200);
+  context.lineTo(290, 190);
+  context.moveTo(250, 200);
+  context.lineTo(290, 210);
+  context.stroke();
+
+  // Draw Doraemon's bell
+  context.fillStyle = '#ffd200';
+  context.beginPath();
+  context.arc(200, 280, 18, 0, Math.PI * 2);
+  context.fill();
+  context.fillStyle = '#000';
+  context.fillRect(198, 280, 4, 10);
+
+  // Draw Doraemon's body
+  context.fillStyle = '#36a1ff';
+  context.beginPath();
+  context.arc(200, 450, 150, 0, Math.PI, true);
+  context.fill();
+
+  // Draw Doraemon's pocket
+  context.fillStyle = '#fff';
+  context.fillRect(135, 310, 130, 80);
+
+  // Draw Doraemon's buttons
+  context.fillStyle = '#000';
+  context.beginPath();
+  context.arc(200, 330, 6, 0, Math.PI * 2);
+  context.arc(200, 360, 6, 0, Math.PI * 2);
+  context.arc(200, 390, 6, 0, Math.PI * 2);
+  context.fill();
+</script>
+</body>
+</html>
