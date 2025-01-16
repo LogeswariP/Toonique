@@ -1,0 +1,29 @@
+html{
+    color-scheme: dark;
+}
+  
+body{
+    color: aliceblue;
+    line-height: 1.5;
+    font-family:Arial; 
+    font-size:16px;
+}
+
+table{       
+  background: #323232;
+}
+
+caption{
+    background: hsl(0,0%,0%);
+}
+
+th{
+    background: hsl(0,0%,0%/0.5);
+}
+
+tr:nth-of-type(2n) {
+  background: hsl(0,0%,0%/0.1);
+}
+p{
+    text-align: justify;
+}
