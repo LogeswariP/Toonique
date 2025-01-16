@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<head>
+
+<title>Toonique</title>
+<link rel="icon" type="image/png" href="https://th.bing.com/th/id/OIP.WIihnp8w_e_CCJftXZ6UxQHaEo?w=263&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="css/main.css">
+  
+<header class="header">
+  <div class="pulse">
+  <span class="material-symbols-outlined">refresh</span>
+</div>
+  <a href="#" class="logo"></a>
+  <nav class="nav-items">
+    <a href="#">Home</a>
+    <div class="pulse">
+  <span class="material-symbols-outlined">home</span>
+</div>
+    <a href="C:\Users\Logeswari\OneDrive\Documents\html\doremon.html">About</a>
+    <div class="pulse">
+  <span class="material-symbols-outlined">search</span>
+</div>
+    <a href="#">Contact</a>
+    <div class="pulse">
+  <span class="material-symbols-outlined">Person</span>
+</div>
+    <a href="C:\Users\Logeswari\OneDrive\Documents\html\login.html">Login</a>
+    <div class="pulse">
+  <span class="material-symbols-outlined">login</span>
+</div>
+    <a href="C:\Users\Logeswari\OneDrive\Documents\html\games.html">Games</a>
+    <div class="pulse">
+  <span class="material-symbols-outlined">games</span>
+</div>
+     <a href="C:\Users\Logeswari\OneDrive\Documents\html\timetable.html">show</a>
+  <div class="pulse">
+  <span class="material-symbols-outlined">Shop</span>
+</div>
+<a href="#">settings</a>
+  <div class="pulse">
+  <span class="material-symbols-outlined">settings</span>
+</div>
+  </nav>
+
+
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("nal").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("nal").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+<style>
+.button-78 {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01,sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .button-78 {
+    padding: 19px 32px;
+  }
+}
+
+.button-78:before,
+.button-78:after {
+  border-radius: 80px;
+}
+
+.button-78:before {
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.button-78:after {
+  background-color: initial;
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.button-78:hover:not(:disabled):before {
+  background: linear-gradient(92.83deg, rgb(255, 116, 38) 0%, rgb(249, 58, 19) 100%);
+}
+
+.button-78:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+  opacity: 0;
+}
+
+.button-78:active:not(:disabled) {
+  color: #ccc;
+}
+
+.button-78:active:not(:disabled):before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+}
+
+.button-78:active:not(:disabled):after {
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.button-78:disabled {
+  cursor: default;
+  opacity: .24;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightpink;
+}
+
+.header .logo {
+  font-size: 350%;
+  font-family: "Sriracha", cursive;
+  color: #000;
+  background-color: lightpink;
+  text-decoration: none;
+  margin-left: 30px;
+}
+    .nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 250%;
+  background-color: lightpink;
+  margin-right: 20px;
+}
+
+.nav-items a {
+  text-decoration:unset;
+  color:floralwhite;
+  padding: 35px 20px;
+}
+
+    
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hotpink;
+  padding: 40px 80px;
+}
+
+.footer .copy {
+  color: white;
+  font-size: 100%;
+}
+
+.bottom-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.bottom-links .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.bottom-links .links span {
+  font-size: 35px;
+  color: whitesmoke;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightpink;
+}
+
+.header .logo {
+  font-size: 25px;
+  font-family: "Sriracha", cursive;
+  color: #000;
+  text-decoration: none;
+  margin-left: 30px;
+}
+.container {
+  width: 300px;
+}
+
+.circle {
+  position: relative;
+  width: 250%;
+  height: 400%;
+  padding: 100% 0 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid gray;
+}
+
+.circle img {
+  position: absolute;
+  top: 0;
+  left: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align: center;
+}
+.button {
+        background-color: #1c87c9;
+        border: none;
+        color: white;
+        padding: 20px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+        align-self: center;
+      }
+.wrapper .icon{
+  position: relative;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 22px;
+  display: inline-block;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #333;
+  text-decoration: none;
+}
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  line-height: 1.5;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color:#ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+  
+  
+}
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color:  #ffffff;
+}
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color:#de463b ;
+  color: white;
+}
+
+.pulse {
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    font-variation-settings: 'wght' 100;
+  }
+  50% {
+    font-variation-settings: 'wght' 700;
+  }
+  100% {
+    font-variation-settings: 'wght' 100;
+  }
+}
+.circular--landscape { display: inline-block; position: relative; width: 488px; height: 488px; overflow: hidden; border-radius: 50%; } 
+    .circular--landscape img { width: auto; height: 100%; margin-left: -50px; }
+
+
+body{
+
+background-color:powderblue;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+
+}
+</style>
+</head>
+</header>
+<body>
+<center>
+<section><form action="/action_page.php" method="get">
+  <label for="browser"><h2>Choose your browser from the list:</h2></label>
+  <input list="browsers" name="browser" id="browser">
+  <datalist id="browsers">
+    <option value="Moana">
+    <option value="Cindrella">
+    <option value="Snow white">
+    <option value="Rupenzal">
+    <option value="Aurora">
+    <option value="Jasmine">
+    <option value="Aurora">
+  </datalist>
+  <input type="submit">
+</form>
+</section>
+</center>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+<h1 style="text-align:center;color:darkviolet;font-family:forte;font-size:600%;"><b> &#127882; TOONIQUE &#127882;</b></h1>
+
+<section>
+<p style="color:black;font-size:35px;text-align:center;font-family:forte;background-color:white;"><i>When you were younger, you probably had to read a lot of stories that you weren't exactly thrilled about. But now that you're all grown up, you can read whatever stories you want- and we've got just the thing. Our selection of cartoons on the subject of reading stories is sure to give you a good laugh. So sit back, relax, and enjoy.
+Check out the list of cartoon characters from The Walt Disney Company, Pixar Animation Studios, Warner Bros. Entertainment, Hanna-Barbera Productions, and Marvel Entertainment. I guarantee you’ll travel back to your childhood days as you go through the list mentioned below…</i></p>
+</section>
+
+<p style="color:#ff1493;font-size:55px;text-align:center;font-family:forte;"><i>CARTOON CHARACTERS</i></p>
+<p style="color:blueviolet;font-size:50px;text-align:center;font-family:forte;"><i>DISNEY PRINCESS</i></p>
+
+<h2 style="color:#ff1493;font-size:50px;font-family:cursive;"><pre><b>       Moana           Cindrella        Snow-White        Rupunzel          </b></pre></h2>
+<div class="circular--landscape"><a href="file:///c:\Users\Logeswari\OneDrive\Documents\html\moana 1.html"> <img src="https://lumiere-a.akamaihd.net/v1/images/g_moana_02_17699_0123be10_884e98e5.jpeg?region=1%2C0%2C1298%2C730" /></a> </div>
+<div class="circular--landscape"> <a href="file:///c:\Users\Logeswari\OneDrive\Documents\html\cindrella1.html"><img src="http://images2.fanpop.com/images/photos/6200000/Cinderella-Wallpaper-disney-princess-6243528-1024-768.jpg" > </a></div>
+<div class="circular--landscape"> <a href="file:///c:\Users\Logeswari\OneDrive\Documents\html\snowwhite1.html"><img src="https://www.bahasainggris.co.id/wp-content/uploads/2015/09/Penjelasan-dan-Contoh-Soal-Narrative-Text-768x432.jpg" /> </a></div>
+<div class="circular--landscape"> <a href="file:///c:\Users\Logeswari\OneDrive\Documents\html\rupenzel1.html"><img src="https://th.bing.com/th/id/R.54e70b91492dbbf26abb32826520c462?rik=GPQx3snDGopVgg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fvOubrfF.jpg&ehk=frghYG1lbUjG4DRAcWEdyhpM%2bnsiH5vMeKFwBkp8Hio%3d&risl=&pid=ImgRaw&r=0" /> </a></div>
+<br>
+<br>
+<h2 style="color:#ff1493;font-size:50px;font-family:cursive;"><pre><b>       Belle            Aurora           Jasmine            Merida          </b></pre></h2>
+
+<div class="circular--landscape"> <a href="file:///c:\Users\Logeswari\OneDrive\Documents\html\cindrella1.html"><img src="https://i.pinimg.com/originals/2e/f1/26/2ef1267e4a484d5df206e3d37bc61c3f.png" /> </a></div>
+<div class="circular--landscape"> <a href="file:///c:\Users\Logeswari\OneDrive\Documents\html\cindrella1.html"><img src="https://i.pinimg.com/originals/31/24/22/31242217fbdf67c70c8f5e3a45d301f6.jpg" > </a></div>
+<div class="circular--landscape"> <a href="file:///c:\Users\Logeswari\OneDrive\Documents\html\snowwhite1.html"><img src="https://th.bing.com/th/id/R.efccc74bc8251e89dd6f2f22028d9cad?rik=cKsTVb1uuB1jOw&riu=http%3a%2f%2fdeadcurious.com%2fwp-content%2fuploads%2f2013%2f06%2fJasmine.jpg&ehk=bQvecI%2bzikB%2fVMabgmDSBrnb5nYTKwu3aOKDm9hWNWo%3d&risl=&pid=ImgRaw&r=0" /> </a></div>
+<div class="circular--landscape"> <a href="file:///c:\Users\Logeswari\OneDrive\Documents\html\rupenzel1.html"><img src="https://cdn.quotesgram.com/img/92/87/619076901-21930-princess-merida-brave-1680x1050-cartoon-wallpaper.jpg" /> </a></div>
+
+
+
+<br>
+<center>
+<h1>Get to know Latitude and Longitude of your location here</h1>
+</center>
+<center>
+<button class="button-78" role="button" onclick="getLocation()">Geo Location</button>
+</center>
+<p id="loli" style="color:blue;text-align:center;color:green;font-size:50px;"></p>
+
+<script>
+var x = document.getElementById("loli");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>
+
+
+
+<br>
+<center>
+<h2>Number of times you visited this page</h2>
+<p><button class="button-78" role="button" onclick="clickCounter()">Come Again</button></p>
+<p id="nal" style="color:blue;text-align:center;color:green;font-size:50px;"></p></center>
+
+<br>
+
+
+
+
+<footer class="footer">
+    <div class="copy">&copy; 2023 Developer</div>
+    <div class="bottom-links">
+      
+      <div class="links">
+        <span>More Info</span>
+        <a href="#">www.kids.cartologin.com</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <div class="wrapper">
+  <a href="#" class="icon facebook">
+    <div class="tooltip">Facebook</div>
+    <span><i class="fab fa-facebook-f"></i></span>
+  </a>
+  <a href="#" class="icon twitter">
+    <div class="tooltip">Twitter</div>
+    <span><i class="fab fa-twitter"></i></span>
+  </a>
+  <a href="#" class="icon instagram">
+    <div class="tooltip">Instagram</div>
+    <span><i class="fab fa-instagram"></i></span>
+  </a>
+  <a href="#" class="icon github">
+    <div class="tooltip">Github</div>
+    <span><i class="fab fa-github"></i></span>
+  </a>
+  <a href="#" class="icon youtube">
+    <div class="tooltip">Youtube</div>
+    <span><i class="fab fa-youtube"></i></span>
+  </a>
+</div>
+      </div>
+    </div>
+  </footer>
+  <br>
+</body>
